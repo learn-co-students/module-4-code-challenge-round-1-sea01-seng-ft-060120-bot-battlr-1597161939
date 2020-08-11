@@ -9,13 +9,16 @@ const botTypeClasses = {
   Captain: "icon star"
 };
 
-const BotCard = props => {
+const BotCard = (props) => {
+
+  console.log(props)
   return (
     <div className="ui column">
       <div
         className="ui card"
         key={props.bot.id}
-        onClick={() => console.log("add code to connect event listener")}
+        onClick={() => props.addBot()} //is not afunciton,not implemented correctly?
+          // console.log("add code to connect event listener")}
       >
         <div className="image">
           <img alt="oh no!" src={props.bot.avatar_url} />
